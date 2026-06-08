@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<article class="project-page">
+  <div class="project-page__hero">
+    <div class="container">
+      <a href="{{ '/#proyectos' | relative_url }}" class="back-link">← Proyectos</a>
+      <div class="project-page__meta">
+        <span class="project-page__status">{{ page.status }}</span>
+        {% if page.tags %}
+        <div class="project-page__tags">
+          {% for tag in page.tags %}
+          <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      <h1 class="project-page__title">{{ page.title }}</h1>
+      <p class="project-page__lead">{{ page.description }}</p>
+    </div>
+  </div>
+
+  <div class="project-page__body">
+    <div class="container">
+      <div class="prose">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</article>

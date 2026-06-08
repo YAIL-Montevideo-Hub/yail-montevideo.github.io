@@ -1,0 +1,26 @@
+<section id="proyectos" class="section section--alt">
+  <div class="container">
+    <div class="section__header">
+      <h2>Proyectos</h2>
+      <p>Iniciativas impulsadas por nuestros miembros para aplicar la IA en contextos de impacto real.</p>
+    </div>
+
+    <div class="cards-grid">
+      {% for project in site.projects %}
+      <a href="{{ project.url | relative_url }}" class="card card--link">
+        <div class="card__status">{{ project.status }}</div>
+        <h3 class="card__title">{{ project.title }}</h3>
+        <p class="card__desc">{{ project.description }}</p>
+        {% if project.tags %}
+        <div class="card__tags">
+          {% for tag in project.tags %}
+          <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+        <span class="card__link">Ver proyecto →</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

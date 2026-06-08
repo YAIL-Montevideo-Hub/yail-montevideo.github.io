@@ -1,0 +1,27 @@
+title: "YAIL Montevideo"
+description: "Hub de Jóvenes Líderes en Inteligencia Artificial — Montevideo, Uruguay"
+url: "https://yail-montevideo.github.io"
+baseurl: ""
+
+lang: es
+timezone: America/Montevideo
+
+collections:
+  projects:
+    output: true
+    permalink: /proyectos/:name/
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - CONTRIBUTING.md
+  - vendor

@@ -1,0 +1,30 @@
+.footer {
+  background: $bg;
+  border-top: 1px solid $border;
+  color: $text-faint;
+  padding: $space-md 0;
+  font-size: 0.85rem;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: $space-sm;
+  }
+}
+
+.footer__links {
+  display: flex;
+  gap: $space-md;
+  list-style: none;
+
+  a {
+    color: $text-faint;
+    transition: color $transition;
+
+    &:hover {
+      color: $text-primary;
+    }
+  }
+}

@@ -1,0 +1,134 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba($bg, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  height: $nav-height;
+  display: flex;
+  align-items: center;
+  transition: border-color $transition, box-shadow $transition;
+
+  &.scrolled {
+    border-bottom-color: $border;
+    box-shadow: 0 1px 24px rgba(0, 0, 0, 0.4);
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: $space-xs;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  @include gradient-text;
+
+  &:hover {
+    opacity: 0.85;
+  }
+
+  img {
+    height: 36px;
+    width: auto;
+  }
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+  list-style: none;
+
+  a {
+    color: $text-muted;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color $transition;
+
+    &:hover,
+    &.active {
+      color: $white;
+    }
+  }
+}
+
+.nav__cta {
+  margin-left: $space-sm;
+}
+
+// Hamburger
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+
+  span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: $text-muted;
+    border-radius: 2px;
+    transition: transform $transition, opacity $transition;
+  }
+
+  &.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  &.open span:nth-child(2) { opacity: 0; }
+  &.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
+
+@media (max-width: 768px) {
+  .nav__toggle {
+    display: flex;
+  }
+
+  .nav__links {
+    display: none;
+    position: absolute;
+    top: $nav-height;
+    left: 0;
+    right: 0;
+    background: $bg-elevated;
+    border-bottom: 1px solid $border;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: $space-sm $space-md;
+
+    &.open {
+      display: flex;
+    }
+
+    li {
+      width: 100%;
+      border-bottom: 1px solid $border;
+
+      &:last-child {
+        border: none;
+        padding-top: $space-xs;
+      }
+
+      a {
+        display: block;
+        padding: 0.75rem 0;
+      }
+    }
+  }
+
+  .nav__cta {
+    margin-left: 0;
+  }
+}

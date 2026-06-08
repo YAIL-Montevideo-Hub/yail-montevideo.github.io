@@ -1,0 +1,130 @@
+.card--link {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+
+  .card__title,
+  .card__desc,
+  .card__status {
+    transition: color $transition;
+  }
+
+  &:hover .card__title {
+    @include gradient-text;
+  }
+}
+
+.back-link {
+  display: inline-block;
+  color: $text-muted;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: $space-md;
+  transition: color $transition;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.project-page__hero {
+  background: $bg;
+  border-bottom: 1px solid $border;
+  padding: $space-lg 0 $space-md;
+}
+
+.project-page__meta {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  margin-bottom: $space-sm;
+  flex-wrap: wrap;
+}
+
+.project-page__status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: $text-faint;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.project-page__tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.project-page__title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  color: $white;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: $space-sm;
+}
+
+.project-page__lead {
+  font-size: 1.15rem;
+  color: $text-muted;
+  max-width: 640px;
+  line-height: 1.7;
+}
+
+.project-page__body {
+  padding: $space-lg 0 $space-xl;
+}
+
+// Prose content styles
+.prose {
+  max-width: 720px;
+  color: $text-muted;
+  line-height: 1.8;
+  font-size: 1rem;
+
+  h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: $white;
+    margin: $space-md 0 $space-xs;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: $white;
+    margin: $space-sm 0 $space-xs;
+  }
+
+  p {
+    margin-bottom: $space-sm;
+  }
+
+  ul, ol {
+    padding-left: $space-md;
+    margin-bottom: $space-sm;
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  a {
+    color: $grad-from;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    &:hover {
+      color: $grad-mid;
+    }
+  }
+
+  strong {
+    color: $text-primary;
+    font-weight: 600;
+  }
+}

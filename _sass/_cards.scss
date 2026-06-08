@@ -1,0 +1,96 @@
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $space-md;
+}
+
+.card {
+  background: $bg-card;
+  border: 1px solid $border;
+  border-radius: $card-radius;
+  padding: $space-md;
+  transition: border-color $transition, box-shadow $transition, transform $transition;
+
+  &:hover {
+    border-color: $border-mid;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px);
+  }
+}
+
+.card__status {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: $text-faint;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: $space-xs;
+}
+
+.card__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: $white;
+  margin-bottom: $space-xs;
+}
+
+.card__desc {
+  font-size: 0.9rem;
+  color: $text-muted;
+  line-height: 1.65;
+  margin-bottom: $space-sm;
+}
+
+.card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: $space-sm;
+}
+
+.card__link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: $grad-from;
+
+  &:hover {
+    color: $grad-mid;
+  }
+}
+
+// Partner logo card
+.partner-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $bg-card;
+  border: 1px solid $border;
+  border-radius: $card-radius;
+  padding: $space-md $space-sm;
+  transition: border-color $transition, box-shadow $transition, transform $transition;
+
+  img {
+    max-height: 52px;
+    width: auto;
+    filter: grayscale(100%) brightness(1.8);
+    opacity: 0.4;
+    transition: filter $transition, opacity $transition;
+  }
+
+  &:hover {
+    border-color: $border-mid;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+
+    img {
+      filter: grayscale(0%) brightness(1);
+      opacity: 1;
+    }
+  }
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: $space-sm;
+}

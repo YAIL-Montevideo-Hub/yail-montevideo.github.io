@@ -1,0 +1,124 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: $font-sans;
+  color: $text-primary;
+  background: $bg;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: $grad-from;
+  text-decoration: none;
+  transition: color $transition;
+
+  &:hover {
+    color: $grad-mid;
+  }
+}
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $space-md;
+}
+
+.section {
+  padding: $space-lg 0;
+
+  &--alt {
+    background: $bg-elevated;
+  }
+}
+
+.section__header {
+  text-align: center;
+  margin-bottom: $space-lg;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $white;
+    margin-bottom: $space-xs;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: $text-muted;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+}
+
+.gradient-text {
+  @include gradient-text;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: opacity $transition, box-shadow $transition;
+
+  &--primary {
+    @include gradient-bg;
+    color: $white;
+
+    &:hover {
+      color: $white;
+      opacity: 0.9;
+      box-shadow: 0 4px 20px rgba($grad-mid, 0.4);
+    }
+  }
+
+  &--outline {
+    background: transparent;
+    color: $text-primary;
+    border: 1px solid $border-mid;
+
+    &:hover {
+      border-color: rgba($white, 0.3);
+      color: $white;
+    }
+  }
+
+  &--accent {
+    @include gradient-bg;
+    color: $white;
+
+    &:hover {
+      color: $white;
+      opacity: 0.9;
+    }
+  }
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  background: rgba($grad-mid, 0.15);
+  color: $grad-mid;
+  border: 1px solid rgba($grad-mid, 0.25);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
