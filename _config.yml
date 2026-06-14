@@ -26,3 +26,4 @@ exclude:
   - CONTRIBUTING.md
   - vendor
   - docs
+  - .github
