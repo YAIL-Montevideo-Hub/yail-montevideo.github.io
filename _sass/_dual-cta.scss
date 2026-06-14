@@ -1,0 +1,62 @@
+// Dual CTA — side-by-side cards (NGO + Join)
+.dual-cta {
+  background: $bg-elevated;
+  border-top: 1px solid $border;
+  color: $white;
+  text-align: center;
+  padding: $space-xl 0;
+  position: relative;
+  overflow: hidden;
+
+  // Gradient glow behind CTA
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba($grad-mid, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+}
+
+.dual-cta__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-md;
+  position: relative;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dual-cta__card {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: $space-md;
+  position: relative;
+}
+
+.dual-cta__title {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  margin-bottom: $space-sm;
+  letter-spacing: -0.02em;
+}
+
+.dual-cta__subtitle {
+  font-size: 1.05rem;
+  color: $text-muted;
+  margin-bottom: $space-md;
+  line-height: 1.75;
+}
+
+.dual-cta__actions {
+  display: flex;
+  justify-content: center;
+  gap: $space-sm;
+  flex-wrap: wrap;
+}
