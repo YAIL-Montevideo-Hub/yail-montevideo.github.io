@@ -25,3 +25,4 @@ exclude:
   - README.md
   - CONTRIBUTING.md
   - vendor
+  - docs
