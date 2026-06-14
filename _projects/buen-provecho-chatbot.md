@@ -26,4 +26,4 @@ El chatbot fue desarrollado en colaboración directa con Buen Provecho y está i
 
 ## Sumate
 
-¿Querés contribuir a proyectos de IA con impacto ambiental y social? Escribinos a [montevideo@youngaileaders.org](mailto:montevideo@youngaileaders.org).
+¿Querés contribuir a proyectos de IA con impacto ambiental y social? Escribinos a [mvdhub.youngaileaders@gmail.com](mailto:mvdhub.youngaileaders@gmail.com).

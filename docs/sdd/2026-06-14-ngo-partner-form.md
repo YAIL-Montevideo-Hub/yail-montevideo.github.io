@@ -51,7 +51,7 @@ Matches `.join` visual structure:
       <p class="join__subtitle">...</p>
       <div class="join__actions">
         <a href="{{ site.data.ngo-form.url }}" class="btn btn--primary" target="_blank" rel="noopener">Contactanos</a>
-        <a href="mailto:montevideo@youngaileaders.org" class="btn btn--outline">Escribinos por email</a>
+        <a href="mailto:mvdhub.youngaileaders@gmail.com" class="btn btn--outline">Escribinos por email</a>
       </div>
     </div>
   </div>

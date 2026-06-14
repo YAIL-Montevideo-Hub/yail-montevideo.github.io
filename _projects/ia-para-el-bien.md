@@ -20,4 +20,4 @@ Este proyecto busca identificar y desarrollar aplicaciones de inteligencia artif
 
 ## ¿Cómo participar?
 
-Si tenés interés en sumarte al proyecto, ya sea como desarrollador, diseñador, investigador o simplemente como alguien con ganas de aportar, escribinos a [montevideo@youngaileaders.org](mailto:montevideo@youngaileaders.org).
+Si tenés interés en sumarte al proyecto, ya sea como desarrollador, diseñador, investigador o simplemente como alguien con ganas de aportar, escribinos a [mvdhub.youngaileaders@gmail.com](mailto:mvdhub.youngaileaders@gmail.com).

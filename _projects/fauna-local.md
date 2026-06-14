@@ -29,4 +29,4 @@ El proyecto busca sumar personas con experiencia en:
 
 ## Contacto
 
-Si querés participar o tenés información sobre fauna local que pueda enriquecer el dataset, escribinos a [montevideo@youngaileaders.org](mailto:montevideo@youngaileaders.org).
+Si querés participar o tenés información sobre fauna local que pueda enriquecer el dataset, escribinos a [mvdhub.youngaileaders@gmail.com](mailto:mvdhub.youngaileaders@gmail.com).
