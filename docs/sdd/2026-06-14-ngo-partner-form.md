@@ -1,32 +1,34 @@
-# SDD: NGO Partner Form Section
+c# SDD: Dual CTA Row — NGO Partner Form + Join Hub
 
 **PRD:** [2026-06-14-ngo-partner-form.md](../prds/2026-06-14-ngo-partner-form.md)
 **Date:** 2026-06-14
-**Status:** Ready for build
+**Status:** Ready for build (updated for side-by-side layout)
 
 ## Context
 
-Single-page Jekyll site with five sections (hero → about → projects → partners → join). The PRD adds an NGO-facing CTA pathway: a new `#asociate` section placed between `#socios` (partner logos) and `#unete` (join), plus a third hero button and a nav link. All content changes are static HTML/CSS — no backend, no new dependencies.
+Single-page Jekyll site with five sections (hero → about → projects → partners → join). The PRD replaces the separate `#asociate` and `#unete` sections with a **dual CTA row** placed after `#socios`: two cards side-by-side on desktop (stacked on mobile). Left card = NGO partnership CTA (`#asociate`), right card = participant join CTA (`#unete`). Also adds a third hero button ("Para ONGs") and a nav link ("ONGs"). All content changes are static HTML/CSS — no backend, no new dependencies.
 
 ## Design
 
 ### Architecture (existing + new)
 
 ```text
-                   index.html (include order)
-                       |
-          hero  about  projects  partners  [NEW: partners-cta]  join
-            |                       |              |              |
-       hero.html              partners.html  partners-cta.html  join.html
-       (edit +btn)              (no change)     (NEW file)    (no change)
-            |
-       nav.html (edit +link)
-            |
-       _data/ngo-form.yml (NEW — single url: key)
-            |
-       _sass/_partners-cta.scss (NEW — extends .join visual style)
-            |
-       assets/css/main.scss (edit +import)
+                    index.html (include order)
+                        |
+           hero  about  projects  partners  [NEW: dual-cta]
+             |                       |
+        hero.html              partners.html
+        (edit +btn)              (no change)
+             |
+        nav.html (edit +link)
+             |
+        _data/ngo-form.yml (NEW — single url: key)
+             |
+        _includes/dual-cta.html (NEW — replaces partners-cta.html + join.html)
+             |
+        _sass/_dual-cta.scss (NEW — grid layout for side-by-side cards)
+             |
+        assets/css/main.scss (edit: replace partners-cta import with dual-cta)
 ```
 
 ### New Data File: `_data/ngo-form.yml`
