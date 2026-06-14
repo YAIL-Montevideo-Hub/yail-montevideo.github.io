@@ -1,7 +1,7 @@
 title: "YAIL Montevideo"
 description: "Hub de Jóvenes Líderes en Inteligencia Artificial — Montevideo, Uruguay"
-url: "https://yail-montevideo.github.io"
-baseurl: ""
+url: "https://yail-montevideo-hub.github.io"
+baseurl: "/yail-montevideo.github.io"
 
 lang: es
 timezone: America/Montevideo
